@@ -26,20 +26,16 @@ RcppExport SEXP bocpd(SEXP base, SEXP data, SEXP pars)
   Rcpp::NumericVector basev(base);
   Rcpp::NumericVector datav(data);
   Rcpp::NumericVector parsv(pars);
-  std::cout << "allocs" << std::endl;
   s = basev[0];
   d.resize(s);
-  std::cout << "base" << std::endl;
   for(int i = 0; i < s; ++i){
     d[i] = datav[i];
   }
-  std::cout << "data" << std::endl;
   gamma = parsv[0];
   kappa = parsv[1];
   alfa = parsv[2];
   beta = parsv[3];
   lambda = parsv[4];
-  std::cout << "pars in" << std::endl;
   trim gmat(s);
   trim kmat(s);
   trim amat(s);
@@ -51,7 +47,6 @@ RcppExport SEXP bocpd(SEXP base, SEXP data, SEXP pars)
   amat.rcwrite(0,0,alfa + 0.5);
   bmat.rcwrite(0,0,beta + (kappa*(d[0] - gamma)*(d[0] - gamma)) /
 	       (2.0 * (kappa + 1.0)));
-  std::cout << "starts" << std::endl;
   for(int i = 1; i < s; ++i){
     for(int j = i; j > -1; j--){
       if(j > 0){
@@ -84,7 +79,6 @@ RcppExport SEXP bocpd(SEXP base, SEXP data, SEXP pars)
       rlp.rcwrite(j,i,rlp.rcread(j,i)/summa);
     }
   }
-  std::cout << "write" << std::endl;
   Rcpp::NumericVector ulos(s*(s+1)/2);
   for(int i = 0; i < s*(s+1)/2; ++i){
     ulos[i] = rlp.linearread(i);

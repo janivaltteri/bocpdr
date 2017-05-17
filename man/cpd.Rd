@@ -49,10 +49,7 @@ Jani Anttila
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-kk <- matrix(c(0.0,0.2,0.0,0.2,0.4,0.2,0.0,0.2,0.0),3,3)
+  cpd(5,c(1.0,2.0,1.0,5.0,6.0),c(1.0,1.0,1.0,1.0,10.0))
 }
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
