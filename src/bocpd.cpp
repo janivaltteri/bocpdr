@@ -13,7 +13,7 @@ double prob(const double x, const double g,
   t1 = log( pow( 1.0+inside*inside/(2.0*a), -(2.0*a + 1.0)/2.0) );
   t2 = lgamma( (2.0*a + 1.0)/2.0 );
   t3 = lgamma( a );
-  t4 = log( sqrt(pi*2.0*a) * (b*(k + 1.0)/(a*k)) ); // tarkista tämä!
+  t4 = log( sqrt(pi*2.0*a) * (b*(k + 1.0)/(a*k)) ); // check this part!
   return(exp(t1+t2-t3-t4));
 }
 

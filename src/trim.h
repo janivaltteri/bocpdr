@@ -3,6 +3,7 @@
 
 #include <vector>
 
+// handler for a triangular matrix from a linear 1d array
 class trim
 {
  private:

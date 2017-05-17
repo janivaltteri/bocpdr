@@ -4,3 +4,6 @@ cpd <- function(steps,data,parsv){
     require(Rcpp)
     .Call('bocpd',c(steps),data,parsv,PACKAGE='bocpdr')
 }
+
+## add a wrapper for building the trellis object (triangular matrix)
+## from the output
