@@ -1,0 +1,12 @@
+Package: bocpdr
+Type: Package
+Title: Bayesian Online ChangePoint Detection for univariate time-series
+Version: 0.1.1
+Date: 2017-05-17
+Author: Jani Anttila
+Maintainer: Jani Anttila <jani.v.anttila@gmail.com>
+Description: Package calls a c++ changepoint detection routine
+License: GPL-2
+Imports: Rcpp (>= 0.11.0)
+LinkingTo: Rcpp
+
