@@ -11,6 +11,10 @@ which is based on:
 Adams, R. P., MacKay, D. J. C, 2007. Bayesian online changepoint detection.
 arxiv.org/abs/0710.3742
 
+# Requirements
+
+Rcpp
+
 # Installation
 
 1) Download
@@ -23,4 +27,11 @@ arxiv.org/abs/0710.3742
 
 ```
 library(bocpdr)
+
+n <- 18
+ds <- c(rep(7,6),rep(2,6),rep(7,6)) + rnorm(n,0.0,1.0)
+out <- cpd(n,ds,c(6.5,0.0,0.5,0.5,20))
+dm <- matrixform(n,out)
+
+image(log(t(dm)+0.1))
 ```
