@@ -11,3 +11,16 @@ which is based on:
 Adams, R. P., MacKay, D. J. C, 2007. Bayesian online changepoint detection.
 arxiv.org/abs/0710.3742
 
+# Installation
+
+1) Download
+2) Unzip
+3) R CMD build bocpdr/
+4) start R
+5) install.packages('bocpdr_X.X.X.tar.gz',repos=NULL)
+
+# Usage
+
+```
+library(bocpdr)
+```
